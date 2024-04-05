@@ -10,6 +10,6 @@ public class HealthController {
     @GetMapping("/health")
     public String getHealth(){
         return ("{\"Status\":\"Up\"}");
-
     }
+
 }
