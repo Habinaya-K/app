@@ -7,9 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthController {
 
-    @GetMapping("/health")
-    public String getHealth(){
+    @GetMapping("/healthup")
+    public String healthUp(){
         return ("{\"Status\":\"Up\"}");
+    }
+
+    @GetMapping("/healthdown")
+    public String healthDown(){
+        return ("Health is down");
     }
 
 }
