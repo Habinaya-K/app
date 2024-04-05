@@ -6,15 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HealthController {
-
-    @GetMapping("/healthup")
-    public String healthUp(){
-        return ("{\"Status\":\"Up\"}");
+    @GetMapping("/health")
+    public String health(){
+        boolean isUp = true;
+        if (isUp){
+            return ("{\"Status\":\"Up\"}");
+        }
+        return ("{\"Status\":\"Down\"}");
     }
-
-    @GetMapping("/healthdown")
-    public String healthDown(){
-        return ("Health is down");
-    }
-
 }
